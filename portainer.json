@@ -85,10 +85,6 @@
                 "container": "/etc/authelia/"
               }
             ]
-          },
-      {
-        // template2
-      },
-      ...
+          }
     ]
   }
