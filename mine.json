@@ -52,12 +52,12 @@
                         },
                         {
                             "text": "survival",
-                            "value": "survival",
+                            "value": "survival"
                         },
                         {
                             "text": "adventure",
-                            "value": "adventure",
-                        },
+                            "value": "adventure"
+                        }
                     ],
 					"description": "Select Game Mode"
 				},
@@ -72,16 +72,16 @@
                         },
                         {
                             "text": "easy",
-                            "value": "easy",
+                            "value": "easy"
                         },
                         {
                             "text": "normal",
-                            "value": "normal",
+                            "value": "normal"
                         },
                         {
                             "text": "hard",
-                            "value": "hard",
-                        },
+                            "value": "hard"
+                        }
                          ],
 					"description": "Select Game Mode"
 				},
@@ -96,8 +96,8 @@
                                 },
                                 {
                                     "text": "FALSE",
-                                    "value": "FALSE",
-                                },
+                                    "value": "FALSE"
+                                }
                                             ],
                             "description": "Determines if animals will be able to spawn." 
                 },
@@ -112,8 +112,8 @@
                                },
                                {
                                    "text": "FALSE",
-                                   "value": "FALSE",
-                               },
+                                   "value": "FALSE"
+                               }
                                            ],
                            "description": "Determines if villagers will be spawned." 
                },
@@ -128,8 +128,8 @@
                         },
                         {
                             "text": "FALSE",
-                            "value": "FALSE",
-                        },
+                            "value": "FALSE"
+                        }
                                 ],
                             "description": "Determines if monsters will be spawned." 
                         },
