@@ -8,7 +8,6 @@
 			"note": "MineCraft Vanilla",
 			"description": "MineCraft Vanilla",
 			"platform": "linux",
-			"logo": "http://clipart-library.com/new_gallery/57-579791_minecraft-steve-alabama.png",
 			"image": "itzg/minecraft-server",
 			"env": [
 				{
@@ -158,7 +157,6 @@
 			"note": "MineCraft Paper",
 			"description": "MineCraft Paper Server",
 			"platform": "linux",
-			"logo": "https://image.freepik.com/free-vector/pixel-art-planet-earth_38133-5.jpg",
 			"image": "itzg/minecraft-server",
 			"env": [
 				{
