@@ -3,19 +3,25 @@
 	"templates": [
 		{
 			"type": 1,
-			"title": "Adguardhome-sync",
-			"name": "Adguardhome-sync",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/adguardhome-sync/config</p>",
-			"description": "[Adguardhome-sync](https://github.com/bakito/adguardhome-sync/) is a tool to synchronize AdGuardHome config to replica instances.",
+			"title": "MineCraft Vanilla",
+			"name": "MineCraft Vanilla",
+			"note": "MineCraft Vanilla",
+			"description": "MineCraft Vanilla",
 			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/adguardhomesync-icon.png",
-			"image": "linuxserver/adguardhome-sync:latest",
+			"logo": "http://clipart-library.com/new_gallery/57-579791_minecraft-steve-alabama.png",
+			"image": "itzg/minecraft-server",
 			"env": [
 				{
 					"name": "PUID",
 					"label": "PUID",
 					"default": "1024",
 					"description": "for GroupID"
+				},
+                {
+					"name": "SERVER_NAME",
+					"label": "Server Name",
+					"default": "MineCraft Vanilla",
+					"description": "Name of the Server"
 				},
 				{
 					"name": "PGID",
@@ -24,11 +30,109 @@
 					"description": "for UserID"
 				},
 				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
+					"name": "EULA",
+					"label": "EULA",
+					"default": "TRUE",
+					"description": "Accepts MineCraft EULA"
 				},
+                {
+					"name": "TYPE",
+					"label": "TYPE",
+					"default": "Vanilla",
+					"description": "Server Type"
+				},
+                {
+                    "name": "GAME MODE",
+                    "label": "MODE",
+                    "select": [
+                        {
+                            "text": "creative",
+                            "value": "creative",
+                            "defaullt": "TRUE"
+                        },
+                        {
+                            "text": "survival",
+                            "value": "survival",
+                        },
+                        {
+                            "text": "adventure",
+                            "value": "adventure",
+                        },
+                    ],
+					"description": "Select Game Mode"
+				},
+                {
+                    "name": "DIFFICULTY",
+                    "label": "Game Difficulty",
+                    "select": [
+                        {
+                            "text": "peaceful",
+                            "value": "peaceful",
+                            "defaullt": "TRUE"
+                        },
+                        {
+                            "text": "easy",
+                            "value": "easy",
+                        },
+                        {
+                            "text": "normal",
+                            "value": "normal",
+                        },
+                        {
+                            "text": "hard",
+                            "value": "hard",
+                        },
+                         ],
+					"description": "Select Game Mode"
+				},
+                {
+                     "name": "SPAWN_ANIMALS",
+                     "label": "SPAWN_ANIMALS",
+                     "select": [
+                         {
+                            "text": "TRUE",
+                                    "value": "TRUE",
+                                    "defaullt": "TRUE"
+                                },
+                                {
+                                    "text": "FALSE",
+                                    "value": "FALSE",
+                                },
+                                            ],
+                            "description": "Determines if animals will be able to spawn." 
+                },
+                {
+                    "name": "SPAWN_NPC",
+                    "label": "SPAWN_NPC",
+                    "select": [
+                        {
+                           "text": "TRUE",
+                                   "value": "TRUE",
+                                   "defaullt": "TRUE"
+                               },
+                               {
+                                   "text": "FALSE",
+                                   "value": "FALSE",
+                               },
+                                           ],
+                           "description": "Determines if villagers will be spawned." 
+               },
+                {
+                    "name": "SPAWN_MONSTERS",
+                    "label": "SPAWN_ANIMALS",
+                    "select": [
+                        {
+                            "text": "TRUE",
+                            "value": "TRUE",
+                            "defaullt": "TRUE"
+                        },
+                        {
+                            "text": "FALSE",
+                            "value": "FALSE",
+                        },
+                                ],
+                            "description": "Determines if monsters will be spawned." 
+                        },
 				{
 					"name": "CONFIGFILE",
 					"label": "CONFIGFILE",
@@ -37,31 +141,37 @@
 				}
 			],
 			"ports": [
-				"8080:8080/tcp"
+				"25565:25565/tcp"
 			],
 			"volumes": [
 			{
-				"container": "/config",
-				"bind": "/volume1/docker/adguardhome-sync/config"
+				"container": "/data",
+				"bind": "/opt/minecraft/paper/datag"
 			}
 			],
 			"restart_policy": "unless-stopped"
 		},
         {
 			"type": 1,
-			"title": "Znc",
-			"name": "Znc",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/znc/config</p>",
-			"description": "[Znc](http://wiki.znc.in/ZNC) is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
+			"title": "MineCraft Paper",
+			"name": "MineCraft Paper",
+			"note": "MineCraft Paper",
+			"description": "MineCraft Paper Server",
 			"platform": "linux",
-			"logo": "http://wiki.znc.in/resources/assets/wiki.png",
-			"image": "linuxserver/znc:latest",
+			"logo": "https://image.freepik.com/free-vector/pixel-art-planet-earth_38133-5.jpg",
+			"image": "itzg/minecraft-server",
 			"env": [
 				{
 					"name": "PUID",
 					"label": "PUID",
 					"default": "1024",
 					"description": "for GroupID"
+				},
+                {
+					"name": "SERVER_NAME",
+					"label": "Server Name",
+					"default": "MineCraft Paper",
+					"description": "Name of the Server"
 				},
 				{
 					"name": "PGID",
@@ -70,22 +180,126 @@
 					"description": "for UserID"
 				},
 				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
+					"name": "EULA",
+					"label": "EULA",
+					"default": "TRUE",
+					"description": "Accepts MineCraft EULA"
+				},
+                {
+					"name": "TYPE",
+					"label": "TYPE",
+					"default": "PAPER",
+					"description": "Server Type"
+				},
+                {
+                    "name": "GAME MODE",
+                    "label": "MODE",
+                    "select": [
+                        {
+                            "text": "creative",
+                            "value": "creative",
+                            "defaullt": "TRUE"
+                        },
+                        {
+                            "text": "survival",
+                            "value": "survival",
+                        },
+                        {
+                            "text": "adventure",
+                            "value": "adventure",
+                        },
+                    ],
+					"description": "Select Game Mode"
+				},
+                {
+                    "name": "DIFFICULTY",
+                    "label": "Game Difficulty",
+                    "select": [
+                        {
+                            "text": "peaceful",
+                            "value": "peaceful",
+                            "defaullt": "TRUE"
+                        },
+                        {
+                            "text": "easy",
+                            "value": "easy",
+                        },
+                        {
+                            "text": "normal",
+                            "value": "normal",
+                        },
+                        {
+                            "text": "hard",
+                            "value": "hard",
+                        },
+                         ],
+					"description": "Select Game Mode"
+				},
+                {
+                     "name": "SPAWN_ANIMALS",
+                     "label": "SPAWN_ANIMALS",
+                     "select": [
+                         {
+                            "text": "TRUE",
+                                    "value": "TRUE",
+                                    "defaullt": "TRUE"
+                                },
+                                {
+                                    "text": "FALSE",
+                                    "value": "FALSE",
+                                },
+                                            ],
+                            "description": "Determines if animals will be able to spawn." 
+                },
+                {
+                    "name": "SPAWN_NPC",
+                    "label": "SPAWN_NPC",
+                    "select": [
+                        {
+                           "text": "TRUE",
+                                   "value": "TRUE",
+                                   "defaullt": "TRUE"
+                               },
+                               {
+                                   "text": "FALSE",
+                                   "value": "FALSE",
+                               },
+                                           ],
+                           "description": "Determines if villagers will be spawned." 
+               },
+                {
+                    "name": "SPAWN_MONSTERS",
+                    "label": "SPAWN_ANIMALS",
+                    "select": [
+                        {
+                            "text": "TRUE",
+                            "value": "TRUE",
+                            "defaullt": "TRUE"
+                        },
+                        {
+                            "text": "FALSE",
+                            "value": "FALSE",
+                        },
+                                ],
+                            "description": "Determines if monsters will be spawned." 
+                        },
+				{
+					"name": "CONFIGFILE",
+					"label": "CONFIGFILE",
+					"default": "/config/adguardhome-sync.yaml",
+					"description": "Set a custom config file."
 				}
 			],
 			"ports": [
-				"6501:6501/tcp"
+				"25566:25565/tcp"
 			],
 			"volumes": [
 			{
-				"container": "/config",
-				"bind": "/volume1/docker/znc/config"
+				"container": "/data",
+				"bind": "/opt/minecraft/paper/data"
 			}
 			],
 			"restart_policy": "unless-stopped"
-		}
+		},
 	]
 }
