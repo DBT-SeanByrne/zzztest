@@ -8,6 +8,7 @@
 			"note": "MineCraft Vanilla",
 			"description": "MineCraft Vanilla",
 			"platform": "linux",
+			"logo": "http://clipart-library.com/new_gallery/57-579791_minecraft-steve-alabama.png",
 			"image": "itzg/minecraft-server",
 			"env": [
 				{
@@ -157,6 +158,7 @@
 			"note": "MineCraft Paper",
 			"description": "MineCraft Paper Server",
 			"platform": "linux",
+			"logo": "https://image.freepik.com/free-vector/pixel-art-planet-earth_38133-5.jpg",
 			"image": "itzg/minecraft-server",
 			"env": [
 				{
@@ -200,12 +202,12 @@
                         },
                         {
                             "text": "survival",
-                            "value": "survival",
+                            "value": "survival"
                         },
                         {
                             "text": "adventure",
-                            "value": "adventure",
-                        },
+                            "value": "adventure"
+                        }
                     ],
 					"description": "Select Game Mode"
 				},
@@ -220,16 +222,16 @@
                         },
                         {
                             "text": "easy",
-                            "value": "easy",
+                            "value": "easy"
                         },
                         {
                             "text": "normal",
-                            "value": "normal",
+                            "value": "normal"
                         },
                         {
                             "text": "hard",
-                            "value": "hard",
-                        },
+                            "value": "hard"
+                        }
                          ],
 					"description": "Select Game Mode"
 				},
@@ -244,8 +246,8 @@
                                 },
                                 {
                                     "text": "FALSE",
-                                    "value": "FALSE",
-                                },
+                                    "value": "FALSE"
+                                }
                                             ],
                             "description": "Determines if animals will be able to spawn." 
                 },
@@ -260,8 +262,8 @@
                                },
                                {
                                    "text": "FALSE",
-                                   "value": "FALSE",
-                               },
+                                   "value": "FALSE"
+                               }
                                            ],
                            "description": "Determines if villagers will be spawned." 
                },
@@ -276,8 +278,8 @@
                         },
                         {
                             "text": "FALSE",
-                            "value": "FALSE",
-                        },
+                            "value": "FALSE"
+                        }
                                 ],
                             "description": "Determines if monsters will be spawned." 
                         },
@@ -298,6 +300,6 @@
 			}
 			],
 			"restart_policy": "unless-stopped"
-		},
+		}
 	]
 }
