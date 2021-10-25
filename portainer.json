@@ -2,89 +2,120 @@
     "version": "2",
     "templates": [
         {
-            "categories": ["MineCraft"],
-            "description": "Deploys MineCraft Vanilla Server",
+        "env": [
+            {
+              "default": "1000",
+              "label": "PUID",
+              "name": "PUID"
+            },
+            {
+              "default": "Type",
+              "label": "Type",
+              "name": "Vanilla"
+            },
+            {
+              "default": "100",
+              "label": "PGID",
+              "name": "PGID"
+            },
+            {
+              "label": "Message of the Day",
+              "name": "MOTD",
+              "set": "Welcom to Vanilla"
+            },              
+            {
+              "label": "ENABLE_RCON",
+              "name": "ENABLE_RCON",
+              "set": "true"
+            },
+            {
+              "label": "EULA",
+              "name": "EULA",
+              "set": "true"
+            },
+            {
+              "label": "RCON_PASSWORD",
+              "name": "RCON_PASSWORD",
+              "set": "Welcome01"
+            },
+            {
+              "label": "RCON_PORT",
+              "name": "RCON_PORT",
+              "set": "28016"
+            }
+          ],
+          "image": "itzg/minecraft-server",
+          "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/airsonic-logo.png",
+          "name": "MineCraft Vanilla",
+          "platform": "linux",
+          "ports": ["25565:25565/tcp"],
+          "restart_policy": "unless-stopped",
+          "title": "MineCraft Vanilla",
+          "type": 1,
+          "volumes": [
+            {
+              "bind": "/opt/minecraft/vanilla/data",
+              "container": "/data"
+                           }
+          ]
+        },
+        {
             "env": [
-              {
-                "default": "1000",
-                "label": "PUID",
-                "name": "PUID"
-              },
-              {
-                "default": "Type",
-                "label": "Type",
-                "name": "Vanilla"
-              },
-              {
-                "default": "100",
-                "label": "PGID",
-                "name": "PGID"
-              },
-              {
-                "label": "Message of the Day",
-                "name": "MOTD",
-                "set": "Welcom to Vanilla"
-              },              
-              {
-                "label": "ENABLE_RCON",
-                "name": "ENABLE_RCON",
-                "set": "true"
-              },
-              {
-                "label": "EULA",
-                "name": "EULA",
-                "set": "true"
-              },
-              {
-                "label": "RCON_PASSWORD",
-                "name": "RCON_PASSWORD",
-                "set": "Welcome01"
-              },
-              {
-                "label": "RCON_PORT",
-                "name": "RCON_PORT",
-                "set": "28016"
-              }
-            ],
-            "image": "itzg/minecraft-server",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/airsonic-logo.png",
-            "name": "MineCraft Vanilla",
-            "platform": "linux",
-            "ports": ["25565:25565/tcp"],
-            "restart_policy": "unless-stopped",
-            "title": "MineCraft Vanilla",
-            "type": 1,
-            "volumes": [
-              {
-                "bind": "/opt/minecraft/vanilla/data",
-                "container": "/data"
-                             }
-            ]
-          },
-          {
-            "categories": ["Other", "Tools", "Authentication"],
-            "description": "An open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal.",
-            "env": [
-              {
-                "label": "TZ",
-                "name": "TZ"
-              }
-            ],
-            "image": "authelia/authelia:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/authelia.png",
-            "name": "authelia",
-            "note": "Requires a configuration.yml file in order to work. Documentation is available <a href='https://docs.authelia.com/deployment/deployment-ha'>here</a>.",
-            "platform": "linux",
-            "ports": ["9091:9091/tcp"],
-            "restart_policy": "unless-stopped",
-            "title": "Authelia",
-            "type": 1,
-            "volumes": [
-              {
-                "bind": "/portainer/Files/AppData/Config/Authelia",
-                "container": "/etc/authelia/"
-              }
-            ]
-          }
-    ]
+                {
+                  "default": "1000",
+                  "label": "PUID",
+                  "name": "PUID"
+                },
+                {
+                  "default": "Type",
+                  "label": "Type",
+                  "name": "Paper"
+                },
+                {
+                  "default": "100",
+                  "label": "PGID",
+                  "name": "PGID"
+                },
+                {
+                  "label": "Message of the Day",
+                  "name": "MOTD",
+                  "set": "Welcom to Paper"
+                },              
+                {
+                  "label": "ENABLE_RCON",
+                  "name": "ENABLE_RCON",
+                  "set": "true"
+                },
+                {
+                  "label": "EULA",
+                  "name": "EULA",
+                  "set": "true"
+                },
+                {
+                  "label": "RCON_PASSWORD",
+                  "name": "RCON_PASSWORD",
+                  "set": "Welcome01"
+                },
+                {
+                  "label": "RCON_PORT",
+                  "name": "RCON_PORT",
+                  "set": "28016"
+                }
+              ],
+              "image": "itzg/minecraft-server",
+              "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/airsonic-logo.png",
+              "name": "MineCraft Vanilla",
+              "platform": "linux",
+              "ports": ["25565:25565/tcp"],
+              "restart_policy": "unless-stopped",
+              "title": "MineCraft Vanilla",
+              "type": 1,
+              "volumes": [
+                {
+                  "bind": "/opt/minecraft/paper/data",
+                  "container": "/data"
+                               }
+              ]
+            },
+         ]
   }
