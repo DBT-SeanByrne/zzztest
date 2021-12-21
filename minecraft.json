@@ -172,7 +172,7 @@
 			"volumes": [
 			{
 				"container": "/data",
-				"bind": "/opt/minecraft/paper/datag"
+				"bind": "/opt/minecraft/vanilla/data"
 			}
 			],
 			"restart_policy": "unless-stopped"
