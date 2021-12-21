@@ -85,6 +85,38 @@
                          ],
 					"description": "Select Game Mode"
 				},
+						                {
+                     "name": "ALLOW_NETHER",
+                     "label": "ALLOW_NETHER",
+                     "select": [
+                         {
+                            "text": "TRUE",
+                                    "value": "TRUE",
+                                    "defaullt": "TRUE"
+                                },
+                                {
+                                    "text": "FALSE",
+                                    "value": "FALSE"
+                                }
+                                            ],
+                            "description": "Allows players to travel to the Nether." 
+                },
+		{
+                     "name": "GENERATE_STRUCTURES",
+                     "label": "GENERATE_STRUCTURES",
+                     "select": [
+                         {
+                            "text": "TRUE",
+                                    "value": "TRUE",
+                                    "defaullt": "TRUE"
+                                },
+                                {
+                                    "text": "FALSE",
+                                    "value": "FALSE"
+                                }
+                                            ],
+                            "description": "Defines whether structures (such as villages) will be generated. false - Structures will not be generated in new chunks. true - Structures will be generated in new chunks." 
+                },
                 {
                      "name": "SPAWN_ANIMALS",
                      "label": "SPAWN_ANIMALS",
@@ -205,6 +237,38 @@
                     ],
 					"description": "Select Game Mode"
 				},
+		                {
+                     "name": "ALLOW_NETHER",
+                     "label": "ALLOW_NETHER",
+                     "select": [
+                         {
+                            "text": "TRUE",
+                                    "value": "TRUE",
+                                    "defaullt": "TRUE"
+                                },
+                                {
+                                    "text": "FALSE",
+                                    "value": "FALSE"
+                                }
+                                            ],
+                            "description": "Allows players to travel to the Nether." 
+                },
+		{
+                     "name": "GENERATE_STRUCTURES",
+                     "label": "GENERATE_STRUCTURES",
+                     "select": [
+                         {
+                            "text": "TRUE",
+                                    "value": "TRUE",
+                                    "defaullt": "TRUE"
+                                },
+                                {
+                                    "text": "FALSE",
+                                    "value": "FALSE"
+                                }
+                                            ],
+                            "description": "Defines whether structures (such as villages) will be generated. false - Structures will not be generated in new chunks. true - Structures will be generated in new chunks." 
+                },
                 {
                     "name": "DIFFICULTY",
                     "label": "Game Difficulty",
