@@ -132,13 +132,7 @@
                         }
                                 ],
                             "description": "Determines if monsters will be spawned." 
-                        },
-				{
-					"name": "CONFIGFILE",
-					"label": "CONFIGFILE",
-					"default": "/config/adguardhome-sync.yaml",
-					"description": "Set a custom config file."
-				}
+                        }
 			],
 			"ports": [
 				"25565:25565/tcp"
@@ -282,13 +276,8 @@
                         }
                                 ],
                             "description": "Determines if monsters will be spawned." 
-                        },
-				{
-					"name": "CONFIGFILE",
-					"label": "CONFIGFILE",
-					"default": "/config/adguardhome-sync.yaml",
-					"description": "Set a custom config file."
-				}
+                        }
+				
 			],
 			"ports": [
 				"25566:25565/tcp"
